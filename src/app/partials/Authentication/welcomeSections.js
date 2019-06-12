@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import Button from '../../components/button';
-
 import Welcome from './welcome';
 import RegisterForm from './registerForm';
 import LoginForm from './loginForm';
@@ -40,26 +38,24 @@ class WelcomeSections extends React.Component {
 
   render() {
       return (
-        <div className="background">
-          <section className="authentication-content">
+        <section className="authentication-content">
 
-            <Welcome />
-            
-            <div className="forms">
-                <div className="tabs">
-                    <span className="tab" onClick={() => this.openTab(1)}><span>A</span><ion-icon name="power"></ion-icon></span>
-                    <span className="tab" onClick={() => this.openTab(2)}><span>B</span><ion-icon name="add"></ion-icon></span>
-                </div>
-                
-                <div className="tabs-wrapper">
-                    <RegisterForm />
-                    
-                    <LoginForm />
-                </div>
-    
+        <Welcome />
+        
+        <div className="forms">
+            <div className="tabs">
+                <span className="tab" onClick={() => this.openTab(1)}><ion-icon name="power"></ion-icon></span>
+                <span className="tab" onClick={() => this.openTab(2)}><ion-icon name="add"></ion-icon></span>
             </div>
-        </section>
-    </div>
+            
+            <div className="tabs-wrapper">
+                <RegisterForm />
+                
+                <LoginForm />
+            </div>
+
+        </div>
+    </section>
     );
   }
 }

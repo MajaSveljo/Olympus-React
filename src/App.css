@@ -116,13 +116,15 @@ header.authentication {
 
 header.authentication, section.authentication-content {
   width: 300px;
-  margin: 40px auto;
+  margin: 0 auto;
+  padding-top: 40px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
 section.authentication-content {
-  color: #fff; }
+  color: #fff;
+  height: calc(100vh - 74px); }
   section.authentication-content .welcome h1 {
     font-weight: 300;
     margin-bottom: 20px; }
@@ -611,7 +613,7 @@ section, .post {
       border: none;
       margin: 0;
       padding: 0 15px; }
-    .post__text .shared .profile-circle {
+    .post__text .shared ionicon {
       position: absolute;
       left: 0;
       -webkit-transform: translateX(-50%);
@@ -813,6 +815,7 @@ section, .post {
       width: unset; }
       .homepage-header__right .profile-horizontal .profile-photo {
         position: relative;
+        min-width: 40px;
         width: 40px;
         height: 40px; }
         .homepage-header__right .profile-horizontal .profile-photo .status {
